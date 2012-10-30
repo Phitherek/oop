@@ -1,0 +1,13 @@
+#!/bin/bash
+header=$1.h
+source=$1.cpp
+blocker=\_$1\_h
+echo "#include <iostream>" > $source
+echo "#include <cstdlib>" >> $source
+echo "#include \"$header\"" >> $source
+echo "using namespace std;" >> $source
+echo "" >> $source
+echo "#ifndef $blocker" > $header
+echo "#define $blocker" >> $header
+echo "" >> $header
+echo "#endif" >> $header

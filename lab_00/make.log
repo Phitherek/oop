@@ -1,0 +1,4 @@
+rm -rf *.o test
+clang++ -Wall   -c -o main.o main.cpp
+clang++ -Wall   -c -o lista.o lista.cpp
+clang++ -Wall -o test main.o lista.o

@@ -1,0 +1,4 @@
+rm -rf *.o lifot
+g++    -c -o main.o main.cpp
+g++    -c -o lifo.o lifo.cpp
+g++  -o lifot main.o lifo.o
