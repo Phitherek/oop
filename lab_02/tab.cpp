@@ -93,4 +93,6 @@ return &newtab;
 void clean(Tab* t) {
 free((*t).tab);
 (*t).tab = NULL;
+(*t).x = 0;
+(*t).y = 0;
 }

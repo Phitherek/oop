@@ -30,7 +30,7 @@ int getindex(int rowsize, int x, int y);
 //! \brief Function initialising Tab structure.
 //!
 //! This function initialises Tab structure with given array size and initial value.
-//! \param t A pointer to the Tab structure, where initialised data is returned.
+//! \param t A pointer to the Tab structure to be initialised.
 //! \param x Number of rows in the array.
 //! \param y Number of columns in the array.
 //! \param initval Initial value of each element of the array.
