@@ -4,6 +4,8 @@
 #include "Charges.h"
 using namespace std;
 
+float Charges::_epsilon;
+
 Charges::Charges() {
 	_list = NULL;
 	_epsilon = 1.;
