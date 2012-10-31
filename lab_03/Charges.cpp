@@ -18,8 +18,9 @@ Charges::~Charges() {
 	delete tnt;	
 	}
 }
+}
 
-Charges& Charges::add(int x, int y, int val) {
+Charges* Charges::add(int x, int y, int val) {
 Charge *newc;
 newc = new Charge;
 newc -> x = x;
@@ -38,7 +39,7 @@ return this;
 
 int Charges::n() {
 int i = 0;
-for(iter = _list; iter != NULL; iter = iter -> next) {
+for(Charge* iter = _list; iter != NULL; iter = iter -> next) {
 i++;	
 }
 return i;
@@ -58,6 +59,6 @@ Force Charges::force(int nx, int ny, int nval) {
 	return f;
 }
 
-float& Charges::epsilon() {
+static float& Charges::epsilon() {
 return _epsilon;	
 }

@@ -33,9 +33,9 @@ static const float _epsilon_zero = 1.; //!< Dielectrical constant of vacuum.
 public:
 	Charges(); //!< A constructor initialising the Charges class.
 	~Charges(); //!< A destructor freeing the memory in the Charges class.
-	Charges& add(int x, int y, int val); //!< A function adding new charge to the list.
+	Charges* add(int x, int y, int val); //!< A function adding new charge to the list.
 	int n(); //!< A function returning number of charges on the list.
 	Force force(int nx, int ny, int nval); //!< A function returning value of a force on a given charge.
-	float& epsilon(); //!< A function allowing user to change dielectrical constant of material.
+	static float& epsilon(); //!< A function allowing user to change dielectrical constant of material.
 };
 #endif
