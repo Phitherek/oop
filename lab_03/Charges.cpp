@@ -61,6 +61,6 @@ Force Charges::force(int nx, int ny, int nval) {
 	return f;
 }
 
-static float& Charges::epsilon() {
+float& Charges::epsilon() {
 return _epsilon;	
 }
