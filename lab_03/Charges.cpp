@@ -20,7 +20,7 @@ Charges::~Charges() {
 }
 }
 
-Charges* Charges::add(int x, int y, int val) {
+Charges Charges::add(int x, int y, int val) {
 Charge *newc;
 newc = new Charge;
 newc -> x = x;
@@ -34,7 +34,7 @@ Charge *iter;
 for(iter = _list; iter -> next != NULL; iter = iter -> next);
 iter -> next = newc;
 }
-return this;
+return *this;
 }
 
 int Charges::n() {
