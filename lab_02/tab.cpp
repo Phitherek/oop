@@ -8,7 +8,6 @@ return x*rowsize+y;
 }
 
 void init(Tab* t, int x, int y, int initval) {
-t = (Tab*)malloc(sizeof(Tab));
 (*t).tab = (int*)malloc(x*y*sizeof(int));
 t -> x = x;
 t -> y = y;
@@ -40,11 +39,15 @@ void set_part(Tab* t, TabRange range, int val) {
 }
 
 void print(Tab* t) {
+	if((*t).tab != NULL) {
 	for(int i = 0; i < (*t).x; i++) {
 		for(int j = 0; j < (*t).y; j++) {
 		cout << (*t).tab[getindex((*t).x, i, j)] << " ";	
 		}
 		cout << endl;
+	}
+	} else {
+	cout << endl;	
 	}
 }
 
@@ -65,19 +68,18 @@ for(int i = range[0]; i < range[2]; i++) {
 }
 
 Tab* extract(Tab* t, TabRange range) {
-Tab* newtab;
-newtab = (Tab*)malloc(sizeof(Tab));
+static Tab newtab;
 int sizex = range[2]-range[0];
 int sizey = range[3]-range[1];
-(*newtab).tab = (int*)malloc(sizex*sizey*sizeof(int));
-(*newtab).x = sizex;
-(*newtab).y = sizey;
+newtab.tab = (int*)malloc(sizex*sizey*sizeof(int));
+newtab.x = sizex;
+newtab.y = sizey;
 int x = 0;
 int y = 0;
 for(int i = range[0]; i < range[2]; i++) {
 	for(int j = range[1]; j < range[3]; j++) {
-	(*newtab).tab[getindex((*newtab).x, x, y)] = (*t).tab[getindex((*t).x, i, j)];
-	if(x+1 >= (*newtab).x) {
+	newtab.tab[getindex(newtab.x, x, y)] = (*t).tab[getindex((*t).x, i, j)];
+	if(x+1 >= newtab.x) {
 	x = 0;
 	y++;	
 	} else {
@@ -85,11 +87,10 @@ for(int i = range[0]; i < range[2]; i++) {
 	}
 	}
 }
-return newtab;
+return &newtab;
 }
 
 void clean(Tab* t) {
 free((*t).tab);
 (*t).tab = NULL;
-free(t);
 }
