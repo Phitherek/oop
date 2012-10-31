@@ -10,8 +10,8 @@ return x*rowsize+y;
 void init(Tab* t, int x, int y, int initval) {
 t = (Tab*)malloc(sizeof(Tab));
 (*t).tab = (int*)malloc(x*y*sizeof(int));
-(*t).x = x;
-(*t).y = y;
+t -> x = x;
+t -> y = y;
 for(int i = 0; i < getindex((*t).x, (*t).x-1, (*t).y-1)+1; i++) {
 	(*t).tab[i] = initval;
 }
