@@ -34,8 +34,18 @@ public:
 	Charges(); //!< A constructor initialising the Charges class.
 	~Charges(); //!< A destructor freeing the memory in the Charges class.
 	Charges add(int x, int y, int val); //!< A function adding new charge to the list.
+	//!< \param x x position of a charge.
+	//!< \param y y position of a charge.
+	//!< \param val Value of a charge.
+	//!< \return A modified Charges class.
 	int n(); //!< A function returning number of charges on the list.
+	//!< \return A number of charges on the list.
 	Force force(int nx, int ny, int nval); //!< A function returning value of a force on a given charge.
+	//!< \param nx x position of a given charge.
+	//!< \param ny y position of a given charge.
+	//!< \param nval Value of a given charge.
+	//!< \return A force on a given charge, in Force structure.
 	static float& epsilon(); //!< A function allowing user to change dielectrical constant of material.
+	//!< \return A reference to dielectrical constant of material.
 };
 #endif
