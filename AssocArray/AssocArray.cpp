@@ -67,8 +67,8 @@ _size = newSize;
 
 void AssocArray::deflate(int size) {
 int newSize = _size - size;
-HashArrayEntry* newArray;
-newArray = new HashArrayEntry[newSize];
+AssocArrayEntry* newArray;
+newArray = new AssocArrayEntry[newSize];
 for(int i = 0; i < newSize; i++) {
 newArray[i] = _arr[i];	
 }
