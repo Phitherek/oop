@@ -1,0 +1,36 @@
+\begin{theindex}
+
+  \item {Assoc\discretionary {-}{}{}Array}, \hyperpage{5}
+    \subitem {deflate}, \hyperpage{6}
+    \subitem {inflate}, \hyperpage{6}
+    \subitem {insert}, \hyperpage{6}
+    \subitem {remove}, \hyperpage{6}
+    \subitem {size}, \hyperpage{6}
+  \item {Assoc\discretionary {-}{}{}Array.\discretionary {-}{}{}h}, 
+		\hyperpage{9}
+  \item {Assoc\discretionary {-}{}{}Array\discretionary {-}{}{}Entry}, 
+		\hyperpage{7}
+
+  \indexspace
+
+  \item {deflate}
+    \subitem {Assoc\discretionary {-}{}{}Array}, \hyperpage{6}
+
+  \indexspace
+
+  \item {inflate}
+    \subitem {Assoc\discretionary {-}{}{}Array}, \hyperpage{6}
+  \item {insert}
+    \subitem {Assoc\discretionary {-}{}{}Array}, \hyperpage{6}
+
+  \indexspace
+
+  \item {remove}
+    \subitem {Assoc\discretionary {-}{}{}Array}, \hyperpage{6}
+
+  \indexspace
+
+  \item {size}
+    \subitem {Assoc\discretionary {-}{}{}Array}, \hyperpage{6}
+
+\end{theindex}

@@ -1,0 +1,151 @@
+\hypertarget{class_assoc_array}{\section{Assoc\-Array Class Reference}
+\label{class_assoc_array}\index{Assoc\-Array@{Assoc\-Array}}
+}
+
+
+A class representing an associative array of integers.  
+
+
+
+
+{\ttfamily \#include $<$Assoc\-Array.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_assoc_array_a9f50d528fb34e77022df902a99b480c9}{\hyperlink{class_assoc_array_a9f50d528fb34e77022df902a99b480c9}{Assoc\-Array} ()}\label{class_assoc_array_a9f50d528fb34e77022df902a99b480c9}
+
+\begin{DoxyCompactList}\small\item\em A constructor for initializing. \end{DoxyCompactList}\item 
+\hypertarget{class_assoc_array_a205392576404e78c4fcfa5156c849c6e}{\hyperlink{class_assoc_array_a205392576404e78c4fcfa5156c849c6e}{$\sim$\-Assoc\-Array} ()}\label{class_assoc_array_a205392576404e78c4fcfa5156c849c6e}
+
+\begin{DoxyCompactList}\small\item\em A destructor for cleaning up. \end{DoxyCompactList}\item 
+void \hyperlink{class_assoc_array_ab0031f87fe1843af6fb1248086610c6e}{insert} (std\-::string key, int value)
+\begin{DoxyCompactList}\small\item\em A function, that inserts a value to associative array. \end{DoxyCompactList}\item 
+void \hyperlink{class_assoc_array_a859a0a7f284c229c28c8581226f8bf0f}{remove} (std\-::string key)
+\begin{DoxyCompactList}\small\item\em A function, that removes a value from associative array. \end{DoxyCompactList}\item 
+\hypertarget{class_assoc_array_a1b83d24dd0ed8030f43ffa08db8c5942}{void \hyperlink{class_assoc_array_a1b83d24dd0ed8030f43ffa08db8c5942}{clean} ()}\label{class_assoc_array_a1b83d24dd0ed8030f43ffa08db8c5942}
+
+\begin{DoxyCompactList}\small\item\em A function, that clears the associative array. \end{DoxyCompactList}\item 
+void \hyperlink{class_assoc_array_a074a811629c29414dfb172f8ed4273e6}{inflate} (int \hyperlink{class_assoc_array_af41e83fc4ee21d2b795c9eab765f45e0}{size})
+\begin{DoxyCompactList}\small\item\em A function, that increases the size of the array of entries. \end{DoxyCompactList}\item 
+void \hyperlink{class_assoc_array_a0d0c725df30b35a2e05c3cdc2ce2eccb}{deflate} (int \hyperlink{class_assoc_array_af41e83fc4ee21d2b795c9eab765f45e0}{size})
+\begin{DoxyCompactList}\small\item\em A function, that decreases the size of the array of entries. \end{DoxyCompactList}\item 
+int \& \hyperlink{class_assoc_array_a707ed0e095cc7d9c80d3619c6c693da3}{operator\mbox{[}$\,$\mbox{]}} (std\-::string key)
+\begin{DoxyCompactList}\small\item\em An operator\-: \mbox{[}\mbox{]}, which can be used to extract integer values by their keys from associative array. \end{DoxyCompactList}\item 
+int \hyperlink{class_assoc_array_af41e83fc4ee21d2b795c9eab765f45e0}{size} ()
+\begin{DoxyCompactList}\small\item\em A function, that returns size of the associative array. \end{DoxyCompactList}\item 
+\hypertarget{class_assoc_array_a64800d2ae59a4a305eb9062a48429a09}{void \hyperlink{class_assoc_array_a64800d2ae59a4a305eb9062a48429a09}{display} ()}\label{class_assoc_array_a64800d2ae59a4a305eb9062a48429a09}
+
+\begin{DoxyCompactList}\small\item\em A function, that displays the associative array on the cout. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A class representing an associative array of integers. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_assoc_array_a0d0c725df30b35a2e05c3cdc2ce2eccb}{\index{Assoc\-Array@{Assoc\-Array}!deflate@{deflate}}
+\index{deflate@{deflate}!AssocArray@{Assoc\-Array}}
+\subsubsection[{deflate}]{\setlength{\rightskip}{0pt plus 5cm}void Assoc\-Array\-::deflate (
+\begin{DoxyParamCaption}
+\item[{int}]{size}
+\end{DoxyParamCaption}
+)}}\label{class_assoc_array_a0d0c725df30b35a2e05c3cdc2ce2eccb}
+
+
+A function, that decreases the size of the array of entries. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & A size by which the size of the array should be decreased. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_assoc_array_a074a811629c29414dfb172f8ed4273e6}{\index{Assoc\-Array@{Assoc\-Array}!inflate@{inflate}}
+\index{inflate@{inflate}!AssocArray@{Assoc\-Array}}
+\subsubsection[{inflate}]{\setlength{\rightskip}{0pt plus 5cm}void Assoc\-Array\-::inflate (
+\begin{DoxyParamCaption}
+\item[{int}]{size}
+\end{DoxyParamCaption}
+)}}\label{class_assoc_array_a074a811629c29414dfb172f8ed4273e6}
+
+
+A function, that increases the size of the array of entries. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & A size by which the size of the array should be increased. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_assoc_array_ab0031f87fe1843af6fb1248086610c6e}{\index{Assoc\-Array@{Assoc\-Array}!insert@{insert}}
+\index{insert@{insert}!AssocArray@{Assoc\-Array}}
+\subsubsection[{insert}]{\setlength{\rightskip}{0pt plus 5cm}void Assoc\-Array\-::insert (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{key, }
+\item[{int}]{value}
+\end{DoxyParamCaption}
+)}}\label{class_assoc_array_ab0031f87fe1843af6fb1248086610c6e}
+
+
+A function, that inserts a value to associative array. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & A key which will identify the entry, of type std\-::string. \\
+\hline
+{\em value} & An int value to be inserted. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_assoc_array_a707ed0e095cc7d9c80d3619c6c693da3}{\index{Assoc\-Array@{Assoc\-Array}!operator\mbox{[}$\,$\mbox{]}@{operator[]}}
+\index{operator\mbox{[}$\,$\mbox{]}@{operator[]}!AssocArray@{Assoc\-Array}}
+\subsubsection[{operator[]}]{\setlength{\rightskip}{0pt plus 5cm}int \& Assoc\-Array\-::operator\mbox{[}$\,$\mbox{]} (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{key}
+\end{DoxyParamCaption}
+)}}\label{class_assoc_array_a707ed0e095cc7d9c80d3619c6c693da3}
+
+
+An operator\-: \mbox{[}\mbox{]}, which can be used to extract integer values by their keys from associative array. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & A key which identifies the entry. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An int value associated with given key. 
+\end{DoxyReturn}
+\hypertarget{class_assoc_array_a859a0a7f284c229c28c8581226f8bf0f}{\index{Assoc\-Array@{Assoc\-Array}!remove@{remove}}
+\index{remove@{remove}!AssocArray@{Assoc\-Array}}
+\subsubsection[{remove}]{\setlength{\rightskip}{0pt plus 5cm}void Assoc\-Array\-::remove (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{key}
+\end{DoxyParamCaption}
+)}}\label{class_assoc_array_a859a0a7f284c229c28c8581226f8bf0f}
+
+
+A function, that removes a value from associative array. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & A key that identifies the entry to be removed, of type std\-::string. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_assoc_array_af41e83fc4ee21d2b795c9eab765f45e0}{\index{Assoc\-Array@{Assoc\-Array}!size@{size}}
+\index{size@{size}!AssocArray@{Assoc\-Array}}
+\subsubsection[{size}]{\setlength{\rightskip}{0pt plus 5cm}int Assoc\-Array\-::size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_assoc_array_af41e83fc4ee21d2b795c9eab765f45e0}
+
+
+A function, that returns size of the associative array. 
+
+\begin{DoxyReturn}{Returns}
+Size of the associative array = Number of entries in the array, of type int. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_assoc_array_8h}{Assoc\-Array.\-h}\item 
+Assoc\-Array.\-cpp\end{DoxyCompactItemize}
