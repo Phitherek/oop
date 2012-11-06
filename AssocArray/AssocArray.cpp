@@ -1,24 +1,24 @@
 #include <iostream>
 #include <cstdlib>
 #include <string>
-#include "HashArray.h"
+#include "AssocArray.h"
 using namespace std;
 
-HashArray::HashArray() {
+AssocArray::AssocArray() {
 _arr = NULL;
 _size = 0;
 }
 
-HashArray::~HashArray() {
+AssocArray::~AssocArray() {
 delete []_arr;
 _arr = NULL;
 _size = 0;
 }
 
-void HashArray::insert(string key, int value) {
+void AssocArray::insert(string key, int value) {
 	for(int i = 0; i < size(); i++) {
 		if(_arr[i].key == key) {
-			cerr << "Error: Could not insert value to hash array: The key must be unique!" << endl;
+			cerr << "Error: Could not insert value to associative array: The key must be unique!" << endl;
 			return;
 		}
 	}
@@ -27,7 +27,7 @@ _arr[_size-1].key = key;
 _arr[_size-1].value = value;
 }
 
-void HashArray::remove(string key) {
+void AssocArray::remove(string key) {
 	int j = -1;
 	for(int i = 0; i < size(); i++) {
 		if(_arr[i].key == key) {
@@ -41,15 +41,15 @@ void HashArray::remove(string key) {
 		}
 		deflate(1);
 	} else {
-		cerr << "Error: Could not find " << key << " key in hash array!" << endl;
+		cerr << "Error: Could not find " << key << " key in associative array!" << endl;
 	}
 }
 
-void HashArray::clean() {
+void AssocArray::clean() {
 deflate(_size);
 }
 
-void HashArray::inflate(int size) {
+void AssocArray::inflate(int size) {
 int newSize = _size + size;
 HashArrayEntry* newArray;
 newArray = new HashArrayEntry[newSize];
@@ -65,7 +65,7 @@ _arr = newArray;
 _size = newSize;
 }
 
-void HashArray::deflate(int size) {
+void AssocArray::deflate(int size) {
 int newSize = _size - size;
 HashArrayEntry* newArray;
 newArray = new HashArrayEntry[newSize];
@@ -77,7 +77,7 @@ _arr = newArray;
 _size = newSize;
 }
 
-int& HashArray::operator[](string key) {
+int& AssocArray::operator[](string key) {
 	int j = -1;
 	for(int i = 0; i < size(); i++) {
 		if(_arr[i].key == key) {
@@ -88,16 +88,16 @@ int& HashArray::operator[](string key) {
 	if(j > -1) {
 	return _arr[i].value;	
 	} else {
-		cerr << "Error: Could not find " << key << " key in hash array!" << endl;
+		cerr << "Error: Could not find " << key << " key in associative array!" << endl;
 	}
 }
 
-int HashArray::size() {
+int AssocArray::size() {
 return _size;	
 }
 
-void HashArray::display() {
-	cout << "HashArray.display():" << endl;
+void AssocArray::display() {
+	cout << "AssocArray.display():" << endl;
 	for(int i = 0; i < size(); i++) {
 		cout << "##########" << endl << "key: " << _arr[i].key << endl << "value: " << _arr[i].value << endl << "##########" << endl;	
 	}
