@@ -19,6 +19,6 @@ cout << tab["third"] << endl;
 cout << tab["fourth"] << " <- The instruction, that should cause an error" << endl;
 cout << tab.size() << endl;
 tab.display();
-tab.clear();
+tab.clean();
 cout << "The array should be now empty..." << endl << "End of test!" << endl;
 }
