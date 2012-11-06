@@ -51,8 +51,8 @@ deflate(_size);
 
 void AssocArray::inflate(int size) {
 int newSize = _size + size;
-HashArrayEntry* newArray;
-newArray = new HashArrayEntry[newSize];
+AssocArrayEntry* newArray;
+newArray = new AssocArrayEntry[newSize];
 for(int i = 0; i < _size; i++) {
 newArray[i] = _arr[i];	
 }
@@ -86,7 +86,7 @@ int& AssocArray::operator[](string key) {
 		}
 	}
 	if(j > -1) {
-	return _arr[i].value;	
+	return _arr[j].value;	
 	} else {
 		cerr << "Error: Could not find " << key << " key in associative array!" << endl;
 	}
