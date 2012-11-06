@@ -20,5 +20,5 @@ cout << tab["fourth"] << " <- The instruction, that should cause an error" << en
 cout << tab.size() << endl;
 tab.display();
 tab.clean();
-cout << "The array should be now empty..." << endl << "End of test!" << endl;
+cout << "The array should now be empty..." << endl << "End of test!" << endl;
 }
