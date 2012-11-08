@@ -1,0 +1,4 @@
+rm -rf *.o htest
+g++ -Wall   -c -o htest.o htest.cpp
+g++ -Wall   -c -o Hist.o Hist.cpp
+g++ -Wall -o htest htest.o Hist.o
