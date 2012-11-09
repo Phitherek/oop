@@ -20,7 +20,8 @@ Hist(int n, float min, float max); ///< \brief A constructor with parameters.
 ///< \param min Minimum of histogram range.
 ///< \param max Maximum of histogram range.
 ~Hist(); ///< \brief A destructor.
-Hist fill(int n); ///< \brief A function, that adds events to histogram.
+Hist(const Hist &h); ///< \brief A copying constructor to avoid memory errors.
+Hist& fill(int n); ///< \brief A function, that adds events to histogram.
 ///< \param n Value of an event.
 ///< \return A modified Hist object.
 static void print(Hist h); ///< \brief A function, that prints out histogram data.

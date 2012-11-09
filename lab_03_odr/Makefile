@@ -1,8 +1,6 @@
 CXXFLAGS = -Wall
-htest: htest.o Hist.o
-	$(CXX) $(CXXFLAGS) -o htest htest.o Hist.o
-htest.o: htest.cpp
-Hist.o: Hist.cpp
+htest:
+	$(CXX) $(CXXFLAGS) -o htest htest.cpp Hist.cpp
 clean:
 	rm -rf *.o htest
 check:

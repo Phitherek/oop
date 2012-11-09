@@ -21,7 +21,17 @@ delete []_bins;
 _bins = NULL;
 }
 
-Hist Hist::fill(int n) {
+Hist::Hist(const Hist &h) {
+_n = h._n;
+_min = h._min;
+_max = h._max;
+_bins = new float[_n];
+for(int i = 0; i < _n; i++) {
+_bins[i] = h._bins[i];	
+}
+}
+
+Hist& Hist::fill(int n) {
 	if(n >= _max || n < _min) {
 	cerr << "Value not in range!" << endl;
 	return *this;	
