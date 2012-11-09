@@ -11,6 +11,27 @@ Charges::Charges() {
 	_epsilon = 1.;
 }
 
+Charges::Charges(const Charges& c) {
+_list = NULL;
+_epsilon = c._epsilon;
+Charge *iter;
+for(iter = c._list; iter != NULL; iter = iter -> next) {
+Charge *newc;
+newc = new Charge;
+newc -> x = iter -> x;
+newc -> y = iter -> y;
+newc -> val = iter -> val;
+newc -> next = NULL;
+if(_list == NULL) {
+_list = newc;
+} else {
+Charge *iter2;
+for(iter2 = _list; iter2 -> next != NULL; iter2 = iter2 -> next);
+iter2 -> next = newc;
+}
+}
+}
+
 Charges::~Charges() {
 	if(_list != NULL) {
 	Charge *iter = _list;
@@ -20,6 +41,7 @@ Charges::~Charges() {
 	delete tnt;	
 	}
 }
+_list = NULL;
 }
 
 Charges Charges::add(int x, int y, int val) {
