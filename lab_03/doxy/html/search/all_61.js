@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['add',['add',['../class_charges.html#ab941aae0d4128710747b5df1236dc83a',1,'Charges']]]
+  ['add',['add',['../class_charges.html#a3c77f0bc9376f19abc3be77f2c6cdb35',1,'Charges']]]
 ];

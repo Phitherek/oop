@@ -44,7 +44,7 @@ Charges::~Charges() {
 _list = NULL;
 }
 
-Charges Charges::add(int x, int y, int val) {
+Charges& Charges::add(int x, int y, int val) {
 Charge *newc;
 newc = new Charge;
 newc -> x = x;

@@ -35,7 +35,7 @@ public:
 	Charges(const Charges& c); //!< A copying constructor to avoid memory errors.
 	//!< \param c A reference to const Charges that is to be copied.
 	~Charges(); //!< A destructor freeing the memory in the Charges class.
-	Charges add(int x, int y, int val); //!< A function adding new charge to the list.
+	Charges& add(int x, int y, int val); //!< A function adding new charge to the list.
 	//!< \param x x position of a charge.
 	//!< \param y y position of a charge.
 	//!< \param val Value of a charge.
