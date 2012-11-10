@@ -5,63 +5,22 @@
 using namespace std;
 
 Angle::Angle() {
-_val = 0;	
+	_val = 0;	
 }
 
 Angle Angle::fromRadians(float rad) {
 	Angle a;
-	float newrad = rad;
-	if(rad < 0) {
-		newrad = -newrad;
-		if(newrad > 2*M_PI) {
-			int n = 2;
-			while(newrad - n*M_PI > 2*M_PI) {
-			n += 2;	
-			}
-			newrad -= n*M_PI;
-			newrad = 2*M_PI - newrad;
-		}
-	}
-	if(rad > 2*M_PI) {
-		int n = 2;
-			while(newrad - n*M_PI > 2*M_PI) {
-			n += 2;	
-			}
-			newrad -= n*M_PI;
-	}
-	a._val = newrad;
+	a._val = fmod ( rad , 2* M_PI);
 	return a;
 }
 
 Angle Angle::fromDegrees(int deg) {
-Angle a;
-float rad = static_cast<float>(deg)/360*2*M_PI;
-float newrad = rad;
-if(rad < 0) {
-		newrad = -newrad;
-		if(newrad > 2*M_PI) {
-			int n = 2;
-			while(newrad - n*M_PI > 2*M_PI) {
-			n += 2;	
-			}
-			newrad -= n*M_PI;
-			newrad = 2*M_PI - newrad;
-		}
-	}
-	if(rad > 2*M_PI) {
-		int n = 2;
-			while(newrad - n*M_PI > 2*M_PI) {
-			n += 2;	
-			}
-			newrad -= n*M_PI;
-	}
-	a._val = newrad;
+	float rad = static_cast<float>(deg)/360*2*M_PI;
+
+	Angle a = Angle::fromRadians ( rad); 
 	return a;
 }
 
-Angle::Angle(const Angle &a) {
-_val = a._val;	
-}
 
 ostream& operator<<(ostream &o, const Angle &a) {
 o << a._val << endl;
