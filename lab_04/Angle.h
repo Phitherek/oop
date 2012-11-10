@@ -19,7 +19,6 @@ static Angle fromRadians(float rad); ///< \brief A named constructor, that creat
 ///< \param rad A value of an angle in radians.
 static Angle fromDegrees(int deg); ///< \brief A named constructor, that created an angle with value in degrees.
 ///< \param deg A value of an angle in degrees.
-Angle(const Angle &a); ///< \brief A copy constructor.
 Angle add(Angle a); ///< \brief A function, that adds an angle to the existing angle.
 ///< \param a An angle to be added.
 ///< \return A modified Angle object.
