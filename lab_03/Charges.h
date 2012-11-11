@@ -28,8 +28,8 @@ float y; //!< y value of the force.
 class Charges {
 private:
 Charge *_list; //!< A head of the list of charges.
-static float _epsilon; //!< A modifiable dielectrical constant of material.
-static const float _epsilon_zero = 1.; //!< Dielectrical constant of vacuum.
+static double _epsilon; //!< A modifiable dielectrical constant of material.
+static const double _epsilon_zero = 1.; //!< Dielectrical constant of vacuum.
 public:
 	Charges(); //!< A constructor initialising the Charges class.
 	Charges(const Charges& c); //!< A copying constructor to avoid memory errors.
@@ -47,7 +47,7 @@ public:
 	//!< \param ny y position of a given charge.
 	//!< \param nval Value of a given charge.
 	//!< \return A force on a given charge, in Force structure.
-	static float& epsilon(); //!< A function allowing user to change dielectrical constant of material.
+	static double& epsilon(); //!< A function allowing user to change dielectrical constant of material.
 	//!< \return A reference to dielectrical constant of material.
 };
 #endif

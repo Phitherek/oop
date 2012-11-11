@@ -9,9 +9,29 @@ Angle::Angle() {
 }
 
 Angle Angle::fromRadians(float rad) {
-	Angle a;
-	a._val = fmod ( rad , 2* M_PI);
-	return a;
+Angle a;	
+float newrad = rad;
+if(rad < 0) {
+ newrad = -newrad;
+ if(newrad > 2*M_PI) {
+   int n = 2;
+   while(newrad - n*M_PI > 2*M_PI) {
+   n += 2;  
+   }
+   newrad -= n*M_PI;
+   newrad = 2*M_PI - newrad;	
+ }  	
+}
+  	
+if(rad > 2*M_PI) {  	
+  int n = 2;
+    while(newrad - n*M_PI > 2*M_PI) {
+    n += 2;  
+    }
+    newrad -= n*M_PI;
+}
+  	
+a._val = newrad;
 }
 
 Angle Angle::fromDegrees(int deg) {
@@ -24,6 +44,7 @@ Angle Angle::fromDegrees(int deg) {
 
 ostream& operator<<(ostream &o, const Angle &a) {
 o << a._val << endl;
+return o;
 }
 
 Angle::operator double() const {

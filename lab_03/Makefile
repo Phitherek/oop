@@ -1,9 +1,7 @@
-ctest: ctest.o Charges.o
-	$(CXX) $(CXXFLAGS) -o ctest ctest.o Charges.o
-ctest.o: ctest.cpp
-Charges.o: Charges.cpp
+all:
+	$(CXX) $(CXXFLAGS) -o ctest ctest.cpp Charges.cpp
 clean:
-	rm -rf *.o ctest
+	rm -rf ctest
 check:
 	./ctest
 debug:

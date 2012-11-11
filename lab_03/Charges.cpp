@@ -4,7 +4,7 @@
 #include "Charges.h"
 using namespace std;
 
-float Charges::_epsilon;
+double Charges::_epsilon;
 
 Charges::Charges() {
 	_list = NULL;
@@ -83,6 +83,6 @@ Force Charges::force(int nx, int ny, int nval) {
 	return f;
 }
 
-float& Charges::epsilon() {
+double& Charges::epsilon() {
 return _epsilon;	
 }
