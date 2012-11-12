@@ -99,28 +99,30 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="class_assoc_array.html#a9f50d528fb34e77022df902a99b480c9" title="A constructor for initializing.">AssocArray</a>(); </div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="class_assoc_array.html#a205392576404e78c4fcfa5156c849c6e" title="A destructor for cleaning up.">~AssocArray</a>(); </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_assoc_array.html#ab0031f87fe1843af6fb1248086610c6e" title="A function, that inserts a value to associative array.">insert</a>(std::string key, <span class="keywordtype">int</span> value); </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="class_assoc_array.html#a9f50d528fb34e77022df902a99b480c9" title="A constructor for initializing.">AssocArray</a>(<a class="code" href="class_assoc_array.html" title="A class representing an associative array of integers.">AssocArray</a>&amp; aa); </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_assoc_array.html#ab0031f87fe1843af6fb1248086610c6e" title="A function, that inserts a value to associative array.">insert</a>(std::string key, <span class="keywordtype">int</span> value); </div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">void</span> <span class="keyword">remove</span>(std::string key); </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_assoc_array.html#a1b83d24dd0ed8030f43ffa08db8c5942" title="A function, that clears the associative array.">clean</a>(); </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_assoc_array.html#a074a811629c29414dfb172f8ed4273e6" title="A function, that increases the size of the array of entries.">inflate</a>(<span class="keywordtype">int</span> <a class="code" href="class_assoc_array.html#af41e83fc4ee21d2b795c9eab765f45e0" title="A function, that returns size of the associative array.">size</a>); </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_assoc_array.html#a0d0c725df30b35a2e05c3cdc2ce2eccb" title="A function, that decreases the size of the array of entries.">deflate</a>(<span class="keywordtype">int</span> size); </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">int</span>&amp; <a class="code" href="class_assoc_array.html#a707ed0e095cc7d9c80d3619c6c693da3" title="An operator: [], which can be used to extract integer values by their keys from associative array...">operator[]</a>(std::string key); </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">void</span> <span class="keyword">remove</span>(std::string key); </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_assoc_array.html#a1b83d24dd0ed8030f43ffa08db8c5942" title="A function, that clears the associative array.">clean</a>(); </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_assoc_array.html#a074a811629c29414dfb172f8ed4273e6" title="A function, that increases the size of the array of entries.">inflate</a>(<span class="keywordtype">int</span> <a class="code" href="class_assoc_array.html#af41e83fc4ee21d2b795c9eab765f45e0" title="A function, that returns size of the associative array.">size</a>); </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_assoc_array.html#a0d0c725df30b35a2e05c3cdc2ce2eccb" title="A function, that decreases the size of the array of entries.">deflate</a>(<span class="keywordtype">int</span> size); </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">int</span>&amp; <a class="code" href="class_assoc_array.html#a707ed0e095cc7d9c80d3619c6c693da3" title="An operator: [], which can be used to extract integer values by their keys from associative array...">operator[]</a>(std::string key); </div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_assoc_array.html#af41e83fc4ee21d2b795c9eab765f45e0" title="A function, that returns size of the associative array.">size</a>(); </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_assoc_array.html#a64800d2ae59a4a305eb9062a48429a09" title="A function, that displays the associative array on the cout.">display</a>(); </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;};</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_assoc_array.html#af41e83fc4ee21d2b795c9eab765f45e0" title="A function, that returns size of the associative array.">size</a>(); </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_assoc_array.html#a64800d2ae59a4a305eb9062a48429a09" title="A function, that displays the associative array on the cout.">display</a>(); </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <a class="code" href="class_assoc_array.html" title="A class representing an associative array of integers.">AssocArray</a>&amp; <a class="code" href="class_assoc_array.html#adf597a541bba1c068a900ad82fefc093" title="A function, that inserts a sum of previous fields to next field.">sumfields</a>(); </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;};</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Nov 6 2012 21:37:49 for AssocArray by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Nov 12 2012 15:50:26 for AssocArray by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.2
 </small></address>
