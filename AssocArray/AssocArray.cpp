@@ -9,6 +9,14 @@ _arr = NULL;
 _size = 0;
 }
 
+AssocArray::AssocArray(AssocArray& aa) {
+_arr = new AssocArrayEntry[aa._size];
+_size = aa._size;
+for(int i = 0; i < _size; i++) {
+_arr[i] = aa._arr[i];	
+}
+}
+
 AssocArray::~AssocArray() {
 delete []_arr;
 _arr = NULL;
@@ -101,4 +109,13 @@ void AssocArray::display() {
 	for(int i = 0; i < size(); i++) {
 		cout << "##########" << endl << "key: " << _arr[i].key << endl << "value: " << _arr[i].value << endl << "##########" << endl;	
 	}
+}
+
+AssocArray& AssocArray::sumfields() {
+int sum = 0;
+for (int i = 0; i < size(); i++) {
+sum += _arr[i].value;
+_arr[i].value = sum;
+}
+return *this;
 }

@@ -23,6 +23,7 @@ int _size; ///< Size of the array.
 public:
 	AssocArray(); ///< A constructor for initializing.
 	~AssocArray(); ///< A destructor for cleaning up.
+	AssocArray(AssocArray& aa); ///< A copy constructor.
 	void insert(std::string key, int value); ///< \brief A function, that inserts a value to associative array.
 	///< \param key A key which will identify the entry, of type std::string.
 	///< \param value An int value to be inserted.
@@ -39,5 +40,6 @@ public:
 	int size(); ///< \brief A function, that returns size of the associative array.
 	///< \return Size of the associative array = Number of entries in the array, of type int.
 	void display(); ///< A function, that displays the associative array on the cout.
+	AssocArray& sumfields(); ///< A function, that inserts a sum of previous fields to next field.
 };
 #endif
