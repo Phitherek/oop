@@ -19,9 +19,6 @@ cout << tab["third"] << endl;
 cout << tab["fourth"] << " <- The instruction, that should cause an error" << endl;
 cout << tab.size() << endl;
 tab.display();
-cout << "Testing copy constructor..." << endl;
-tab.sumfields();
-tab.display();
 tab.clean();
 cout << "The array should now be empty..." << endl << "End of test!" << endl;
 }
