@@ -23,7 +23,7 @@ Angle Angle::fromDegrees(int deg) {
 
 
 ostream& operator<<(ostream &o, const Angle &a) {
-o << a._val << endl;
+o << a._val;
 }
 
 Angle::operator double() const {
@@ -51,5 +51,9 @@ float rad;
 rad = _val;
 rad = rad/(2*M_PI);
 deg = rad*360;
+while(deg > 360) {
+deg = deg - 360;
+}
+deg = 360 - deg;
 return deg;
 }
