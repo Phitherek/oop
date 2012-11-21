@@ -10,7 +10,7 @@
 /// \brief A class representing a circle that inherits from Object.
 class Circle: public Object {
 private:
-_r;
+int _r;
 public:
 Circle(); ///< A constructor.
 Circle(int r); ///< \brief A constructor with parameter.
