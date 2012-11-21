@@ -14,8 +14,14 @@ Object* _tab;
 int _size;
 public:
 ObjectContainer(); ///< A constructor.
-ObjectContainer(ObjectContainer& oc); ///< A copy constructor.
+ObjectContainer(ObjectContainer& oc); ///< \brief A copy constructor.
+/// \param oc A reference to an ObjectContainer to be copied.
 ~ObjectContainer(); ///< A destructor.
-ObjectContainer& push(Object o); ///< A function, that adds an Object to the end of array.
-Object pop(); ///< A function that returns and erases an Object from the end of array.
+ObjectContainer& push(Object o); ///< \brief A function, that adds an Object to the end of array.
+///< \param o An Object to be added.
+///< \return A reference to changed ObjectContainer.
+Object pop(); ///< \brief A function that returns and erases an Object from the end of array.
+///< \return An Object from the end of array.
+int size(); ///< \brief A function that returns array size.
+///< \return Array size.
 };
