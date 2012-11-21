@@ -9,6 +9,10 @@
 /// \class Triangle
 /// \brief A class representing a triangle that inherits from Object.
 class Triangle: public Object {
+private:
+	int _a;
+	int _h;
+public:
 Triangle(); ///< A constructor.
 Triangle(int a, int h); ///< \brief A constructor with parameters.
 ///< \param a A size of the bottom line.
