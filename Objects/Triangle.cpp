@@ -35,11 +35,11 @@ _h = h;
 }	
 }
 
-int& Triangle::getA() {
+int Triangle::getA() {
 return _a;	
 }
 
-int& Triangle::getH() {
+int Triangle::getH() {
 return _h;	
 }
 
@@ -48,5 +48,4 @@ cout << "Triangle::draw():" << endl;
 cout << "desc: " << _desc << endl;
 cout << "a: " << _a << endl;
 cout << "h: " << _h << endl << endl;
-}
 }

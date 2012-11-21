@@ -34,7 +34,7 @@ newTab = new Object[_size];
 for(int i = 0; i < _size-1; i++) {
 newTab[i] = _tab[i];	
 }
-newTab[i] = o;
+newTab[_size-1] = o;
 Object* tnt = _tab;
 _tab = newTab;
 delete []tnt;

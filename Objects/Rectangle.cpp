@@ -48,17 +48,17 @@ cout << "Rectangle::draw():" << endl;
 cout << "desc: " << _desc << endl;
 cout << "x: " << _x << endl;
 cout << "y: " << _y << endl << endl;
-for(int j = 0; j < x; j++) {
+for(int j = 0; j < _x; j++) {
 cout << "-";
 }
-for(int i = 0; i < y; i++) {
+for(int i = 0; i < _y; i++) {
 cout << "|";
-for(int j = 0; j < x; j++) {
+for(int j = 0; j < _x; j++) {
 cout << " ";
 }
-cout << "|"
+cout << "|";
 }
-for(int j = 0; j < x; j++) {
+for(int j = 0; j < _x; j++) {
 cout << "-";
 }
 }

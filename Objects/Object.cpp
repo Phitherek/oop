@@ -21,6 +21,6 @@ string Object::getDesc() {
 return _desc;	
 }
 
-virtual void Object::draw() {
-cout << "Object::draw(): " << endl << "desc: " << desc << endl;
+void Object::draw() {
+cout << "Object::draw(): " << endl << "desc: " << _desc << endl;
 }

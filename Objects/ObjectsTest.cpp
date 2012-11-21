@@ -66,9 +66,9 @@ if(c == 'a') {
 cerr << "No such action!" << endl;	
 }
 }
-while(op.size() > 0) {
+while(oc.size() > 0) {
 Object o;
-o = op.pop();
+o = oc.pop();
 o.draw();
 }
 return EXIT_SUCCESS;
