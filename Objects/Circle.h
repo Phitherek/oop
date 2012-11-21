@@ -8,7 +8,7 @@
 
 /// \class Circle
 /// \brief A class representing a circle that inherits from Object.
-class Circle {
+class Circle: public Object {
 private:
 _r;
 public:
@@ -22,4 +22,4 @@ Circle& setR(int r); ///< \brief A function, that sets radius of a circle.
 int getR(); ///< \brief A function, that returns radius of a circle.
 ///< \return A radius of the circle.
 void draw(); ///< A function, that outputs some information about circle.
-
+};

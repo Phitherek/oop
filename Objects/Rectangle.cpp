@@ -1,6 +1,6 @@
 #include <iostream>
 #include <cstdlib>
-#include <string>
+#include "Rectangle.h"
 using namespace std;
 
 Rectangle::Rectangle() {
