@@ -19,6 +19,7 @@ if(c == 'a') {
 	cin >> desc;
 	char c2;
 	cout << "(r)ectangle/(s)quare/(c)ircle/(t)riangle: ";
+	cin >> c2;
 	if(c2 == 'r') {
 	Rectangle r;
 	int x, y;
