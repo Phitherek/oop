@@ -27,7 +27,7 @@ _tab = NULL;
 _size = 0;
 }
 
-ObjectContainer& ObjectContainer::push(Object o) {
+ObjectContainer& ObjectContainer::push(Object& o) {
 _size = _size+1;
 Object* newTab;
 newTab = new Object[_size];
@@ -41,11 +41,10 @@ delete []tnt;
 return *this;
 }
 
-Object ObjectContainer::pop() {
+Object& ObjectContainer::pop() {
 _size = _size-1;
 Object* newTab;
-Object save;
-save = _tab[_size];
+static Object save = _tab[_size];
 newTab = new Object[_size];
 for(int i = 0; i < _size; i++) {
 newTab[i] = _tab[i];	

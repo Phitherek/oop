@@ -68,8 +68,7 @@ cerr << "No such action!" << endl;
 }
 }
 while(oc.size() > 0) {
-Object o;
-o = oc.pop();
+Object& o = oc.pop();
 o.draw();
 }
 return EXIT_SUCCESS;
