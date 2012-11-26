@@ -8,12 +8,16 @@
 using namespace std;
 
 int main() {
-char c = 's';
+char cc = 's';
 ObjectContainer oc;
-while(c != 'p') {
+Rectangle r;
+Square s;
+Circle c;
+Triangle t;
+while(cc != 'p') {
 cout << "What would you like to do? (a)dd an Object/(p)rint and quit: ";
-cin >> c;
-if(c == 'a') {
+cin >> cc;
+if(cc == 'a') {
 	string desc;
 	cout << "desc: ";
 	cin >> desc;
@@ -21,7 +25,6 @@ if(c == 'a') {
 	cout << "(r)ectangle/(s)quare/(c)ircle/(t)riangle: ";
 	cin >> c2;
 	if(c2 == 'r') {
-	Rectangle r;
 	int x, y;
 	cout << "x: ";
 	cin >> x;
@@ -32,7 +35,6 @@ if(c == 'a') {
 	cout << "Created rectangle: desc: " << r.getDesc() << ", x: " << r.getX() << ", y: " << r.getY() << endl;
 	oc.push(r);	
 	} else if(c2 == 's') {
-	Square s;
 	int x;
 	cout << "x: ";
 	cin >> x;
@@ -41,7 +43,6 @@ if(c == 'a') {
 	cout << "Created square: desc: " << s.getDesc() << ", x: " << s.getSize() << endl;
 	oc.push(s);	
 	} else if(c2 == 'c') {
-		Circle c;
 	int r;
 	cout << "r: ";
 	cin >> r;
@@ -50,7 +51,6 @@ if(c == 'a') {
 	cout << "Created circle: desc: " << c.getDesc() << ", r: " << c.getR() << endl;
 	oc.push(c);
 	} else if(c2 == 't') {
-		Triangle t;
 	int a, h;
 	cout << "a: ";
 	cin >> a;
@@ -63,7 +63,7 @@ if(c == 'a') {
 	} else {
 	cerr << "No such object!" << endl;	
 	}
-} else if(c != 'p') {
+} else if(cc != 'p') {
 cerr << "No such action!" << endl;	
 }
 }

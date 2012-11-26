@@ -10,7 +10,7 @@
 /// \brief A class representing a dynamic array of Object objects.
 class ObjectContainer {
 private:
-Object* _tab;
+Object** _tab;
 int _size;
 public:
 ObjectContainer(); ///< A constructor.

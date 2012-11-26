@@ -47,5 +47,5 @@ void Triangle::draw() {
 cout << "Triangle::draw():" << endl;
 cout << "desc: " << _desc << endl;
 cout << "a: " << _a << endl;
-cout << "h: " << _h << endl << endl;
+cout << "h: " << _h << endl;
 }
