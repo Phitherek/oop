@@ -10,8 +10,8 @@
 /// \brief A class that represents a rectangle and inherits from Object.
 class Rectangle: public Object {
 protected:
-	int _x;
-	int _y;
+	int _x; ///< X size of a rectangle.
+	int _y; ///< Y size of a rectangle.
 public:
 	Rectangle(); ///< A constructor.
 	Rectangle(int x, int y); ///< \brief A constructor with parameters
@@ -26,5 +26,5 @@ public:
 	///< \return A reference to X size of a rectangle.
 	int& getY(); ///< \brief A function, that returns a reference to Y size of a rectangle.
 	///< \return A reference to Y size of a rectangle.
-	void draw(); /// A function, that draws a rectangle.
+	void draw(); /// A function, that outputs some information about rectangle.
 };

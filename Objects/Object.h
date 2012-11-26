@@ -11,7 +11,7 @@
 
 class Object {
 protected:
-	std::string _desc;
+	std::string _desc; ///< Description of the object,
 public:
 	Object(); ///< A constructor.
 	~Object(); ///< A destructor.

@@ -1,6 +1,6 @@
 #pragma once
 #include "Object.h"
-/// \file Object.h
+/// \file Circle.h
 /// \brief An implementation of a circle, inheriting from Object.
 /// \author Phitherek_
 /// \date 2012

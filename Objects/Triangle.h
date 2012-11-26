@@ -1,6 +1,6 @@
 #pragma once
 #include "Object.h"
-/// \file Object.h
+/// \file Triangle.h
 /// \brief An implementation of a triangle, inheriting from Object.
 /// \author Phitherek_
 /// \date 2012
