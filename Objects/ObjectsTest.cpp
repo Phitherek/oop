@@ -5,6 +5,7 @@
 #include "Circle.h"
 #include "Triangle.h"
 #include "ObjectContainer.h"
+#include "BadChoiceException.h"
 using namespace std;
 
 int main() {
@@ -15,6 +16,7 @@ Square s;
 Circle c;
 Triangle t;
 while(cc != 'p') {
+try {
 cout << "What would you like to do? (a)dd an Object/(p)rint and quit: ";
 cin >> cc;
 if(cc == 'a') {
@@ -58,13 +60,20 @@ if(cc == 'a') {
 	cin >> h;
 	t.setSize(a, h);
 	t.setDesc(desc);
-	cout << "Created rectangle: desc: " << t.getDesc() << ", a: " << t.getA() << ", h: " << t.getH() << endl;
+	cout << "Created triangle: desc: " << t.getDesc() << ", a: " << t.getA() << ", h: " << t.getH() << endl;
 	oc.push(t);
 	} else {
-	cerr << "No such object!" << endl;	
+	BadChoiceException e("No such object!");
+	throw(e);	
 	}
 } else if(cc != 'p') {
-cerr << "No such action!" << endl;	
+BadChoiceException e;
+e.setMsg("No such action!");
+throw(e);
+}
+}
+catch(BadChoiceException& e) {
+cerr << e.what() << endl;	
 }
 }
 while(oc.size() > 0) {
