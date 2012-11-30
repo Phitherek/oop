@@ -18,17 +18,16 @@ _line = -1;
 }
 
 void myexcept::handler(string context) {
-	string t;
-	if(_file != "" && _line != -1) {
-		cout << "Plik: " << _file << " Linia: " << _line << " ";
-		t = _type;
-	} else {
-	t = "runtime_error";	
-	}
-	cout << "Kontekst: (" << context << ") " << t << ": ";
-	if(t == "runtime_error") {
-	//cout << runtime_error::what() << endl; Nie działa :(	
-	} else {
-	cout << _msg << endl;	
-	}
+try {
+throw;	
+}
+catch(calculation_exception& ce) {
+cout << "plik: " << ce._file << " linia: " << ce._line << " kontekst: (" << context << ") calculation_exception: " << ce.what() << endl;	
+}
+catch(numerical_exception& ne) {
+cout << "plik: " << ne._file << " linia: " << ne._line << " kontekst: (" << context << ") numerical_exception: " << ne.what() << endl;	
+}
+catch(runtime_error& re) {
+cout << "kontekst: (" << context << ") runtime_error: " << re.what() << endl;	
+}
 }

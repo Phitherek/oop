@@ -14,7 +14,6 @@ protected:
 	static std::string _msg; ///< Error message.
 	static std::string _file; ///< File, where exception has been throwed.
 	static int _line; ///< Line, where exception has been throwed.
-	static std::string _type; ///< Type of the exception.
 public:
 	numerical_exception(); ///< \brief A constructor.
 	numerical_exception(std::string msg); ///< \brief A constructor with parameter.
