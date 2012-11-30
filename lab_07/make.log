@@ -1,0 +1,2 @@
+rm -rf exc
+g++ -Wall -g -o exc exc.cpp moje_obliczenia.cpp numerical_exception.cpp calculation_exception.cpp myexcept.cpp
