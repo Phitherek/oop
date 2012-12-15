@@ -1,0 +1,2 @@
+rm -rf otest
+g++ -o otest otest.cpp Opt.cpp ShortOpt.cpp LongOpt.cpp Arg.cpp ShortOptWithArg.cpp

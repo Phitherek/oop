@@ -1,0 +1,9 @@
+#include <iostream>
+#include <cstdlib>
+#include "lista.h"
+using namespace std;
+
+int main() {
+
+return EXIT_SUCCESS;
+}
